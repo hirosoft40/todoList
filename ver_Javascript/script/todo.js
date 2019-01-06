@@ -79,31 +79,3 @@ uls.addEventListener('click', function(e){
     } 
 });
 
-
-// ---- jQuery add new row
-// $("input[type='text']").keypress(function(event){
-//     if (event.which ===13){
-//         var todoText = $(this).val();
-//         $(this).val("");
-//         // create new li and add to ul
-//         $('ul').append("<li><span class='trash'><i class='fas fa-trash-alt'></i></span>"+todoText+"</li>")
-//     }
-// })
-
-// ---- jQuery fadeout input area with 
-// $('.fa-angle-down').click(function(){
-//     $("input[type='text']").fadeToggle()
-// })
-
-// --- jQuery toggle completed
-// $('ul').on('click','li',function(){
-//     $(this).toggleClass("completed");
-// })
-
-// --- jQuery trash click delete
-// $('ul').on('click','.trash',function(event){
-//     $(this).parent().fadeOut(500, function(){
-//         $(this).remove();
-//     });
-//     event.stopPropagation();
-// })
