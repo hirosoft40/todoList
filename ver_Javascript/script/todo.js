@@ -12,17 +12,6 @@ var eleClicked;
 var eleClickedI;
 var id = lis.length; // FOR NEW ID
 
-
-// GET CLICKED ID
-function getId(clk){
-    eleClicked = document.getElementById(clk)
-}
-//GET CLICKED ID
-function getEleIdI(clk){
-    eleClickedI = document.getElementById(clk)
-}
-
-
 // ======= Add new row
 inp.addEventListener('keyup', function(event){
     event.preventDefault();
@@ -30,7 +19,6 @@ inp.addEventListener('keyup', function(event){
         if (!inp.value){
             alert ('Please type in todo list.')
         } else {
-
             var newLi = document.createElement('li');
             newLi.setAttribute('class','item-list');
             newLi.setAttribute('id',id)
@@ -64,6 +52,11 @@ arrow.addEventListener('click', function(){
     inp.focus();
 })
 
+// GET CLICKED ID
+function getId(clk){
+    eleClicked = document.getElementById(clk)
+}
+
 // ====COMPLETED =====
 uls.addEventListener('click', function(e){
 if (eleClicked.tagName === 'LI'){
@@ -71,6 +64,10 @@ if (eleClicked.tagName === 'LI'){
     } 
 });
 
+//GET CLICKED ID
+function getEleIdI(clk){
+    eleClickedI = document.getElementById(clk)
+}
 // ====DELETE =====
 uls.addEventListener('click', function(e){
     if (eleClickedI.tagName === 'SPAN'){

@@ -1,9 +1,12 @@
 $(function(){
+
+    // When user clicks +, the focus will go to input area
     $('.fa-plus').click(function(e){
         $("#mainInput").fadeToggle();
         $("#mainInput").focus();
     });
 
+    // On Enter, append li to ul
     $("input[type='text']").keypress(function (e) { 
         if(e.which === 13){
             let task = $(this).val();
@@ -21,11 +24,12 @@ $(function(){
         }
     });
 
-
+    // when user clicked li, it will strikethrough
     $('#mainUl').on('click','li',function(){
         $(this).toggleClass('completed');
     });
 
+    // when user clicked trash icon, then it will be deleted
     $('#mainUl').on('click','.trash',function(){
         $(this).parent().fadeOut(400,function(){
             $(this).remove();
